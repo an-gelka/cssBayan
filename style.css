@@ -61,6 +61,37 @@ body {
   border-top: 0.01rem solid #00000063;
 }
 
+label:before {
+  display: none;
+  content: '\002B';  
+  font-size: 1.8rem;
+}
+
+.accordion:hover label:before {
+  display: block;
+  order: 2;
+}
+
+.accordion:hover > .accordion-label {
+  color: #000;
+}
+
+.accordion-input:checked + .accordion-label {
+  color: #000;
+}
+
+.accordion-input:checked + .accordion-label:before {  
+  transform: rotate(45deg);
+  transition: transform 0.5s;
+}
+
+@media (min-width: 821px) {
+  .accordion-input:hover + .accordion-label:before {  
+    transform: rotate(45deg);
+    transition: transform 0.5s;
+  }
+}
+
 .video-box {
   display: flex;
   justify-content: center;
@@ -72,9 +103,8 @@ body {
   transition: 0.5s; 
 }
 
-
 .video-memes {
-  width: 50%;
+  width: 40%;
   height: auto;
   max-height: 100%;
 }
@@ -82,5 +112,13 @@ body {
 .accordion-input:checked + .accordion-label + .video-box {
   height: auto;
   padding: 10px 0;
-  transition: 2s;
+  transition: 0.5s;
+}
+
+@media (min-width: 821px) {
+  .accordion-input:hover + .accordion-label + .video-box {
+    height: auto;
+    padding: 20px 0;
+    transition: 2s;
+  }  
 }
