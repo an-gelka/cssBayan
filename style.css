@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100%;
+  font-family: 'Golos Text', sans-serif;
+  line-height: 1;
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  width: 60%;
+  min-height: 50px;
+  margin-top: 20px;
+}
+
+.title {
+  font-size: 1.5rem;
+  color: rgb(77, 187, 238);  
+}
+
+.accordion {
+  width: 60%;
+  margin: 20px auto;
+  color: #1916b8;
+}
+
+.accordion-input{
+  display: none;  
+}
+
+.accordion-label {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+  margin-bottom: 5px;
+  width: 100%;
+  min-height: 60px;
+  font-size: 1.2rem;
+  font-weight: 300;
+  box-sizing: border-box;
+  border-top: 0.01rem solid #00000063;
+}
+
+.video-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  height: 0;  
+  overflow: hidden;
+  transition: 0.5s; 
+}
